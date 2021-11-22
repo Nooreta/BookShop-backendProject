@@ -1,0 +1,8 @@
+<?php 
+$userId=$_SESSION['userId'];
+require_once("includes/connect.php");
+$getThisUserData="select * from users where userId=$userId";
+$userDataResult=mysqli_query($conn,$getThisUserData);
+$thisUser=mysqli_fetch_assoc($userDataResult);
+
+?>
